@@ -8,7 +8,7 @@
   The dataset used for this analysis is the "News_Category_Dataset_v3.json" dataset created by Rishabh Misra on [Kaggle]([https://www.kaggle.com/datasets/rmisra/news-category-dataset/data]).
 
 - ### Data Structure
-  This dataset contains 209,527 rows, with each row representing one news entry. and 6 columns, with each column representing data related with that particular news entry. The columns are dipicted in the table below.
+  This dataset contains 209,527 rows, with each row representing one news entry. and 6 columns, with each column representing data related with that particular news entry. The columns along with a snapshot of the dataset are dipicted in the table below.
 
 | link                                                                                               | headline                                                                                           | category   | short_description                                                                                                                            | authors                | date       |
 |----------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------|------------------------|------------|
