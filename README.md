@@ -15,7 +15,7 @@
 | https://www.huffpost.com/entry/covid-boosters-uptake-us_n_632d719ee4b087fae6feaac9                | Over 4 Million Americans Roll Up Sleeves For Omicron-Targeted COVID Boosters                       | U.S. NEWS  | Health experts said it is too early to predict whether demand would match up with the 171 million doses of the new boosters the U.S. ordered | Carla K. Johnson, AP  | 2022-09-23 |
 | https://www.huffpost.com/entry/american-airlines-passenger-banned-flight-attendant-punch-justice-department_n_632e25d3e4b0e247890329f. | American Airlines Flyer Charged, Banned For Life After Punching Flight Attendant On Video           | U.S. NEWS  | He was subdued by passengers and crew when he fled to the back of the aircraft after the confrontation, according to the U.S. attorney's office... | Mary Papenfuss         | 2022-09-23 |
 | ... | ...                               | ...     | ...                                                                                   | ...     | ... |
-| https://www.huffpost.com/entry/amy-cooper-loses-discrimination-lawsuit-franklin-templeton_n_632c6463e4b09d8701bd227e... | Woman Who Called Cops On Black Bird-Watcher Loses Lawsuit Against Ex-Employer                     | U.S. NEWS  | Amy Cooper accused investment firm Franklin Templeton of unfairly firing her and branding her a racist after video of the Central Park encounter... | Nina Golgowski         | 2022-09-22 |
+| https://www.huffingtonpost.com/entry/dwight-howard-rips-teammates-magic-hornets_us_5bb69b24e4b097869fd1b331 | Dwight Howard Rips Teammates After Magic Loss To Hornets               | SPORTS  | The five-time all-star center tore into his teammates Friday night after Orlando ... | N/A   | 2012-01-28 |
 
 
   *Sample snapshot of dataset*
