@@ -1,21 +1,21 @@
-# News Categry Classification
-![Game Map of League of Legends](assets/SR.jpg)
-*Summoner's Rift, the primary map in League of Legends*
+# News Category Classification
+![Newsroom](assets/newsroom.jpg)
+*Reuters newsroom in London. REUTERS/Simon Newman*
 
 - ### Project Overview and Objective
-  This project aims to predict which team would win a League of Legends game using in-game data representing the game state at the 15-minute mark. League of Legends is an online MOBA game with two sides, a blue side and a red side, with each side consisting of five players. In particular, given the vector of the in-game statistics $X_i$ of game $i$, this project aims to construct a classifier $C$ to predict the outcome $Y_i$ of game $i$, in which $Y_i$ is a binary class denoting the win or loss of the blue side in that particular game.
-
+  This project aims to classify the news category based on its summary and short description. This project first deploys methods such as Latent Dirichlet Allocation and Wordclouds to perform EDA and provides the basis for feature transformation and data preprocessing. Subsequently, this project leverages the Bidirectional Encoder Representations from Transformers (BERT) model to vectorize the text, which is utilized to fit four distinct models with hyperparameter tuning. In particular, this project aims to classify the category of news $K_i$ based on a vector of transformed embeddings $X_i$, which $i$ representing one news entry or one column in the dataset. As a result, all four models achieved an accuracy of over 71%, with the best-performing model yielding an accuracy of over 74%. 
 - ### Data Source
-  The dataset used for this analysis is the "match_data_v5.csv" dataset, originally created by Karlo Rusovan and Daria Komic on [Kaggle](https://www.kaggle.com/datasets/karlorusovan/league-of-legends-soloq-matches-at-10-minutes-2024/data).
+  The dataset used for this analysis is the "News Category Dataset" (News_Category_Dataset_v3.json) dataset created by Rishabh Misra on [Kaggle]([https://www.kaggle.com/datasets/rmisra/news-category-dataset/data]).
 
 - ### Data Structure
-  This dataset contains 24,224 rows, with each row representing one unique game, and 29 columns, with the first column being the matchID and the last column being the indicator of whether the blue side had won that game. The remaining columns represent in-game statistics of both teams, including gold earned, wards placed, turrets destroyed, etc.
+  This dataset contains 209,527 rows, with each row representing one news entry. and 6 columns, with each column representing data related with that particular news entry. The columns along with a snapshot of the dataset are dipicted in the table below.
 
-  |matchID|blueTeamControlWardsPlaced|...|redTeamControlWardsPlaced|...|blueWin|
-  |-------|--------------------------|---|-------------------------|---|-------|
-  |EUW1_6882489515|2|...|34|...|1|
-  |...|...|...|...|...|
-  |EUW1_6881140491|6|...|1|...|1|
+| link                                                                                               | headline                                                                                           | category   | short_description                                                                                                                            | authors                | date       |
+|----------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------|------------------------|------------|
+| https://www.huffpost.com/entry/covid-boosters-uptake-us_n_632d719ee4b087fae6feaac9                | Over 4 Million Americans Roll Up Sleeves For Omicron-Targeted COVID Boosters                       | U.S. NEWS  | Health experts said it is too early to predict whether demand would match up with the 171 million doses of the new boosters the U.S. ordered | Carla K. Johnson, AP  | 2022-09-23 |
+| ... | ...                               | ...     | ...                                                                                   | ...     | ... |
+| https://www.huffingtonpost.com/entry/dwight-howard-rips-teammates-magic-hornets_us_5bb69b24e4b097869fd1b331 | Dwight Howard Rips Teammates After Magic Loss To Hornets               | SPORTS  | The five-time all-star center tore into his teammates Friday night after Orlando ... | N/A   | 2012-01-28 |
+
 
   *Sample snapshot of dataset*
 
@@ -68,5 +68,7 @@ $$
 
 - ### References
 
-  [1] Redback93. "SRFull-1600p." Reddit, 20 July 2025, https://www.reddit.com/r/leagueoflegends/comments/3dx2dn/extremely_high_resolution_summoners_rift_image/ \
-  [2] Karlo Rusovan and Daria Komic, League of Legends SoloQ matches at 15 minutes 2024 (Kaggle, 2024), https://www.kaggle.com/datasets/karlorusovan/league-of-legends-soloq-matches-at-10-minutes-2024/data
+- 31st October 2019
+
+  [1] Simon Newman. "rtr1pc8i_0.jpg" Reuters Institute for the Study of Journalism, 31 October 2019, https://reutersinstitute.politics.ox.ac.uk/news/if-your-newsroom-not-diverse-you-will-get-news-wrong/ \
+  [2] Rishabh Misra, News Category Dataset (Kaggle, 2022), https://www.kaggle.com/datasets/rmisra/news-category-dataset/data
