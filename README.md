@@ -8,13 +8,14 @@
   The dataset used for this analysis is the "News_Category_Dataset_v3.json" dataset created by Rishabh Misra on [Kaggle]([https://www.kaggle.com/datasets/rmisra/news-category-dataset/data]).
 
 - ### Data Structure
-  This dataset contains 24,224 rows, with each row representing one unique game, and 29 columns, with the first column being the matchID and the last column being the indicator of whether the blue side had won that game. The remaining columns represent in-game statistics of both teams, including gold earned, wards placed, turrets destroyed, etc.
+  This dataset contains 209,527 rows, with each row representing one news entry. and 6 columns, with each column representing data related with that particular news entry. The columns are dipicted in the table below.
 
-  |matchID|blueTeamControlWardsPlaced|...|redTeamControlWardsPlaced|...|blueWin|
-  |-------|--------------------------|---|-------------------------|---|-------|
+  |link|headline|category|short_description|authors|date|
+  |----|--------|--------|-----------------|-------|----|
   |EUW1_6882489515|2|...|34|...|1|
   |...|...|...|...|...|
   |EUW1_6881140491|6|...|1|...|1|
+
 
   *Sample snapshot of dataset*
 
