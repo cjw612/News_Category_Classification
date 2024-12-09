@@ -26,9 +26,9 @@
   - **Feature Transformation:** Given the similarity between specific categories (e.g., CULTURE & ARTS and ARTS & CULTURE), the current 42 categories are merged into a new set of eight categories based on domain knowledge and a sample of five news entries from each category. To examine how distinct the remaining eight categories are, Latent Dirichlet Allocation and Wordclouds are deployed to examine 1) the most important words in each topic and 2) the highest-frequency words of each topic, respectively. In addition, features $headline$ and $short_description$ are also merged into a single feature $text$ to optimize computational efficiency since it can be inferred that the headline and the description of a news entry should contain similar information.
     ![wordcloud sample](assets/wordcloud_sample.png)
     *Sample Wordcloud result for six of the post-process categories*
-  - **Entry Removal:** After performing feature removal, there are no columns Removed 471 duplicate entries
+  - **Entry Removal:** After performing feature removal, there are no columns; 471 duplicate entries are also removed.
     
-$$
+
 \left( \text{goldDiff} \geq 4000 \land \text{blueWin} = 0 \right) \lor \left( \text{goldDiff} \leq -4000 \land \text{blueWin} = 1 \right)
 $$
 
