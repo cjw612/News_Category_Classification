@@ -5,7 +5,7 @@
 - ### Project Overview and Objective
   This project aims to classify the news category based on its summary and short description. This project first deploys methods such as Latent Dirichlet Allocation and Wordclouds to perform EDA and provides the basis for feature transformation and data preprocessing. Subsequently, this project leverages the Bidirectional Encoder Representations from Transformers (BERT) model to vectorize the text, which is utilized to fit four distinct models with hyperparameter tuning. In particular, this project aims to classify the category of news $K_i$ based on a vector of transformed embeddings $X_i$, which $i$ representing one news entry or one column in the dataset. As a result, all four models achieved an accuracy of over 71%, with the best-performing model yielding an accuracy of over 74%. 
 - ### Data Source
-  The dataset used for this analysis is the "News Category Dataset" (News_Category_Dataset_v3.json) dataset created by Rishabh Misra on [Kaggle]([https://www.kaggle.com/datasets/rmisra/news-category-dataset/data]).
+  The dataset used for this analysis is the **"News Category Dataset" (News_Category_Dataset_v3.json)** dataset created by Rishabh Misra on [Kaggle]([https://www.kaggle.com/datasets/rmisra/news-category-dataset/data]).
 
 - ### Data Structure
   This dataset contains 209,527 rows, with each row representing one news entry. and 6 columns, with each column representing data related with that particular news entry. The columns along with a snapshot of the dataset are dipicted in the table below.
