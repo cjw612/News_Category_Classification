@@ -44,9 +44,11 @@
   - What are the top words associated with a certain category?
 
 - ### Data Analysis
-  Four different models are deployed in this analysis to determine which model performs the best on this dataset:
-  - **Logistic Regression with L1 penalty** \
-    Due to this problem being a binary classification problem, Logistic Regression is deployed while incorporating an L1 penalty in the model to perform feature selection. The coefficient $C$ is also optimized by grid search with the package *GridSearchCV*.
+  Data analysis is performed through three stages: text vectorization, dimension reduction, and model fitting. 
+  - #### Text Vecorization
+    Prior to vectorizing, text are preprocessed with the _BertTokenizer_ function, which tokenizes chunks of text into individual tokens for subsequent vectorization. The following text vectorization is conducted with BERT, in particular the _bert_base_uncased_ model. BERT is selected due to it being one of the state-of-the-art models in Natural Language Processing. The output of BERT is a 768-dimension word embedding that represents the original text.
+  - #### Dimension Reduction
+    After vectorization, $X_i$ is a 768-dimension vector. As the complexity of some of the models scale exponentially with the dimension of $X_i$, dimension reduction is applied with Principal Component Analysis (PCA). PCA performs dimension reduction while maximizing the variance retained by the reduced dimensions. To select the number of principal components to be retained, a threshold of 90% is set, i.e. the principal components would capture 90% of the total variance of all features. 
   - **Linear Discriminant Analysis (LDA)** \
     Based on the results of the EDA, we can observe that the features in both classes roughly follow a Gaussian distribution. Therefore, Linear Discriminant Analysis is deployed, in addition to its low variance to prevent overfitting, as opposed to Quadratic Discriminant Analysis.
   - **Random Forest with Bayesian hyperparameter optimization** \
