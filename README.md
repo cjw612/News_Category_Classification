@@ -34,11 +34,10 @@
   
 
 - ### Exploratory Data Analysis
-  EDA in this project is aimed to address the following questions:
+  After preprocessing, there are only two columns remaining: $text$, which is the product of the merging of $headline$ and $short description$, and $reduced category$, which represents the new classes after merging. Therefore, EDA in this project is limited, and primarily aimed to address the following two questions:
 
-  - What are the correlations between features?
-  - What are the distributions of quantitative features?
-  - What is the difference in the distribution of quantitative features across the two target classes?
+  - What is the distribution of categories?
+  - What are the top words associated with a certain category?
 
 - ### Data Analysis
   Four different models are deployed in this analysis to determine which model performs the best on this dataset:
