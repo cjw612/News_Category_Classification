@@ -52,7 +52,7 @@
     ![pca](assets/pca.png)
     *Cumulative explained variance graph of PCA. The red dashed line represents the 90% level of cumulative variance explained.*
   - #### Model Fitting
-    - **Hyperparameter tuning:** Prior to fitting each model, hyperparameters related to each model are first optimized through Bayesian Optimization with the package _hyperopt_. _hyperopt_ is chosen due to its customability and control over optimization algorithms.
+    - **Hyperparameter tuning:** Prior to fitting each model, hyperparameters related to each model are first optimized through Bayesian Optimization with the package _hyperopt_. The package _hyperopt_ is chosen due to its flexibility over its parameters in the optimization process.
     - **Model selection:**
       - Logistic Regression with l2 penalty: 
 
