@@ -44,7 +44,7 @@
   - What are the top words associated with a specific category?
 
 - ### Data Analysis
-  Data analysis is performed through three stages: text vectorization, dimension reduction, and model fitting. 
+  Data analysis is performed throughout three phases: text vectorization, dimension reduction, and model fitting. 
   - #### Text Vectorization
     Prior to vectorizing, text is preprocessed with the _BertTokenizer_ function, which tokenizes chunks of text into individual tokens for subsequent vectorization. The following text vectorization is conducted with BERT, in particular, the _bert_base_uncased_ model. BERT was selected due to it being one of the state-of-the-art models in natural language processing. The output of BERT is a 768-dimension word embedding that represents the original text. GPU acceleration is also implemented to exploit parallel processing to reduce the runtime of the mode. 
   - #### Dimension Reduction
