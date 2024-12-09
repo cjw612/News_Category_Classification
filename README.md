@@ -22,9 +22,8 @@
 - ### Data Cleaning and Preprocessing
   The purpose of this phase is to perform feature transformation and reduction prior to data analysis. In addition, missing values and duplicates are also identified and deleted.
 
-  - Created features that represent the difference between a particular feature between teams. Note that all such features are constructed by subtracting the corresponding value of the red team from the blue team. 
-    For instance, the feature $goldDiff$ is created by $blueTeamTotalGold - redTeamTotalGold$.
-  - Transformed necessary features to categorical variables. In particular, features $blueWin$, $blueTeamFirstBlood$ and $redTeamFirstBlood$ are transformed into binary categorical variables due to their binary nature.
+  - Columns $authors$, $link$, and $date$ are dropped due to the limited value provided for the analysis. The link and date are irrelevant to the news category, and although the $authors$ column did not display any missing values, there are, in fact, 37,418 missing news entries that do not have an associated author. In addition, due to the presence of more than 29,000 unique authors, the $authors$ column is thus determined to provide limited marginal information in addition to the content itself.
+  - Given the similarity between specific categories (e.g. CULTURE & ARTS and ARTS & CULTURE), the current 42 categories are merged into a new set of 8 categories based on domain knowledge and a sample of 5 news entries from each category. 
   - Removed outlier games identified by winning with a significant gold deficit at 15 minutes or losing with a significant gold lead at 15 minutes. 730 games satisfy this criteria, which constitutes around 3% of the total games. The data points that satisfy the following criteria are filtered out prior to data analysis:
     
 $$
