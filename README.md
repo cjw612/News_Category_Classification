@@ -48,11 +48,13 @@
   - #### Text Vecorization
     Prior to vectorizing, text are preprocessed with the _BertTokenizer_ function, which tokenizes chunks of text into individual tokens for subsequent vectorization. The following text vectorization is conducted with BERT, in particular the _bert_base_uncased_ model. BERT is selected due to it being one of the state-of-the-art models in Natural Language Processing. The output of BERT is a 768-dimension word embedding that represents the original text.
   - #### Dimension Reduction
-    After vectorization, $X_i$ is a 768-dimension vector. As the complexity of some of the models scale exponentially with the dimension of $X_i$, dimension reduction is applied with Principal Component Analysis (PCA). PCA performs dimension reduction while maximizing the variance retained by the reduced dimensions. To select the number of principal components to be retained, a threshold of 90% is set, i.e. the principal components would capture 90% of the total variance of all features.
+    After vectorization, $X_i$ is a 768-dimension vector. As the complexity of some of the models scale exponentially with the dimension of $X_i$, dimension reduction is applied with Principal Component Analysis (PCA). PCA performs dimension reduction while maximizing the variance retained by the reduced dimensions. To select the number of principal components to be retained, a threshold of 90% is set, i.e. the principal components would capture 90% of the total variance of all features. After PCA, 286 principal components are retained, replacing the original word embeddings for subsequent model fitting.
     ![pca](assets/pca.png)
     *Cumulative explained variance graph of PCA. The red dashed line represents the 90% level of cumulative variance explained.*
-  - **Linear Discriminant Analysis (LDA)** \
-    Based on the results of the EDA, we can observe that the features in both classes roughly follow a Gaussian distribution. Therefore, Linear Discriminant Analysis is deployed, in addition to its low variance to prevent overfitting, as opposed to Quadratic Discriminant Analysis.
+  - #### Model Fitting
+    **Hyperparameter tuning:** Prior to fitting each model, hyperparameters related to each model are first optimized through Bayesian Optimization with the package _hyperopt_. _hyperopt_ is chosen due to its customability and control over optimization algorithms.
+    **Model fitting:**
+    - Logistic Regression with l2 penalty: 
   - **Random Forest with Bayesian hyperparameter optimization** \
     Implemented Random Forest with hyperparameter Bayesian optimization with the package *hyperopt*.
   - **XGBoost with Bayesian hyperparameter optimization** \
