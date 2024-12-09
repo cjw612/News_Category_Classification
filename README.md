@@ -6,7 +6,7 @@
   - #### Project Objective:
     This project aims to classify the category of a news entry based on its summary and short description. In particular, this project aims to classify the category of news entry $K_i$ based on a vector of transformed embeddings from the headline and the description of that news entry $X_i$, with $i$ representing one news entry or one row in the dataset.
   - #### Project Overview:
-    This project first deploys methods such as Latent Dirichlet Allocation and Wordclouds to provide the basis for feature transformation and data preprocessing. Subsequently, this project leverages the Bidirectional Encoder Representations from Transformers (BERT) model to vectorize the text, which is then used to fit four distinct machine learning models with prior hyperparameter tuning. As a result, all four models achieved an accuracy of over 71%, with the best-performing model yielding an accuracy of over 74%.
+    This project first deploys methods such as Latent Dirichlet Allocation and Wordclouds to provide the basis for feature transformation and data preprocessing. Subsequently, this project leverages the Bidirectional Encoder Representations from Transformers (BERT) model to vectorize the text, which, after applying dimension reducuction with Principal Component Analysis, is then used to fit four distinct machine learning models with prior hyperparameter tuning. As a result, all four models achieved an accuracy of over 71%, with the best-performing model yielding an accuracy of over 74%.
     ![workflow](assets/analysis_flowchart.png)
     *Project flowchart and corresponding python notebook files*
 - ### Data Source
@@ -36,7 +36,6 @@
     - **Headline and short_description merging:** Features $headline$ and $short description$ are also merged into a single feature $text$ to optimize computational efficiency since it can be inferred that the headline and the description of a news entry should contain similar information.
   - #### Entry Removal:
     After performing feature removal, there are no columns; 471 duplicate entries are also removed.
-  
 
 - ### Exploratory Data Analysis
   After preprocessing, there are only two columns remaining: $text$, which is the product of the merging of $headline$ and $short description$, and $reduced category$, which represents the new classes after merging. Therefore, EDA in this project is limited, and primarily aimed to address the following two questions:
