@@ -4,6 +4,7 @@
 
 - ### Project Objective and Overview
   - **Project Objective:** This project aims to classify the category of a news entry based on its summary and short description. In particular, this project aims to classify the category of news entry $K_i$ based on a vector of transformed embeddings from the headline and the description of that news entry $X_i$, with $i$ representing one news entry or one row in the dataset.
+    ![workflow](assets/flowchart.png)
   - **Project Overview:** This project first deploys methods such as Latent Dirichlet Allocation and Wordclouds to provide the basis for feature transformation and data preprocessing. Subsequently, this project leverages the Bidirectional Encoder Representations from Transformers (BERT) model to vectorize the text, which is then used to fit four distinct machine learning models with prior hyperparameter tuning. As a result, all four models achieved an accuracy of over 71%, with the best-performing model yielding an accuracy of over 74%. 
 - ### Data Source
   The dataset used for this analysis is the **"News Category Dataset" (News_Category_Dataset_v3.json)** dataset created by Rishabh Misra on [Kaggle]([https://www.kaggle.com/datasets/rmisra/news-category-dataset/data]).
