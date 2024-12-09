@@ -23,14 +23,15 @@
   The purpose of this phase is to perform feature transformation and reduction prior to data analysis. In addition, missing values and duplicates are also identified and deleted.
 
   - **Feature Removal:** Columns $authors$, $link$, and $date$ are dropped due to the limited value provided for the analysis. The link and date are irrelevant to the news category, and although the $authors$ column did not display any missing values, there are, in fact, 37,418 missing news entries that do not have an associated author. In addition, due to the presence of more than 29,000 unique authors, the $authors$ column is thus determined to provide limited marginal information in addition to the content itself.
-  - **Feature Transformation:** Given the similarity between specific categories (e.g., CULTURE & ARTS and ARTS & CULTURE), the current 42 categories are merged into a new set of eight categories based on domain knowledge and a sample of five news entries from each category. To examine how distinct the remaining eight categories are, Latent Dirichlet Allocation and Wordclouds are deployed to examine 1) the most important words in each topic and 2) the highest-frequency words of each topic, respectively. In addition, features $headline$ and $short_description$ are also merged into a single feature $text$ to optimize computational efficiency since it can be inferred that the headline and the description of a news entry should contain similar information.
-    ![wordcloud sample](assets/wordcloud_sample.png)
-    *Sample Wordcloud result for six of the post-process categories*
+  - **Feature Transformation:**
+    - _Category reduction_ \
+      Given the similarity between specific categories (e.g., CULTURE & ARTS and ARTS & CULTURE), the current 42 categories are merged into a new set of eight categories based on domain knowledge and a sample of five news entries from each category. To examine how distinct the remaining eight categories are, Latent Dirichlet Allocation and Wordclouds are deployed to examine 1) the most important words in each topic and 2) the highest-frequency words of each topic, respectively. 
+      ![wordcloud sample](assets/wordcloud_sample.png)
+      *Sample Wordcloud result for six of the post-process categories*
+    - _Headline and short_description merging_
+      Features $headline$ and $short description$ are also merged into a single feature $text$ to optimize computational efficiency since it can be inferred that the headline and the description of a news entry should contain similar information.
   - **Entry Removal:** After performing feature removal, there are no columns; 471 duplicate entries are also removed.
-    
-
-\left( \text{goldDiff} \geq 4000 \land \text{blueWin} = 0 \right) \lor \left( \text{goldDiff} \leq -4000 \land \text{blueWin} = 1 \right)
-$$
+  
 
 - ### Exploratory Data Analysis
   EDA in this project is aimed to address the following questions:
