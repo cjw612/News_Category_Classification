@@ -4,7 +4,7 @@
 
 - ### Project Objective and Overview
   - #### Project Objective:
-    This project aims to classify the category of a news entry based on its summary and short description. In particular, the goal is to classify the $i^{th}$ news entry $Y_i$, into exactly one category from $K$ categories, in which $Y_i \subseteq K$, based on a vector of word embeddings from the concatenated headline short description of that news entry $X_i$.
+    This project aims to classify the category of a news entry based on its summary and short description. In particular, the goal is to classify the $i^{th}$ news entry $Y_i$, into exactly one category from $K$ categories, in which $Y_i \subseteq K$, based on a vector of word embeddings from the concatenated headline short description of the corresponding $i^{th}$ news entry $X_i$.
   - #### Project Overview:
     This project first deploys methods such as Latent Dirichlet Allocation and Wordclouds to provide the basis for feature transformation and data preprocessing. Subsequently, this project leverages the Bidirectional Encoder Representations from Transformers (BERT) model to vectorize the text, which, after applying dimension reduction with Principal Component Analysis, is then used to fit three distinct learning models with prior hyperparameter tuning in two of them. As a result, all three models achieved an accuracy of over 73%, with the best-performing model yielding an accuracy of over 74%.
     ![workflow](assets/analysis_flowchart.png)
