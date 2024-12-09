@@ -58,7 +58,7 @@
       - **Linear Support Vector Classification:** Linear SVC is a special instance of a Support Vector Machine (SVM). It is recommended to be implemented on large datasets in practice and also in [scikit's documentation](https://scikit-learn.org/1.5/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC). By default, Linear SVC also applies a $l2$ regularization to the model. Therefore, the hyperparameter optimized in Linear SVC is also the parameter $C$, representing the regularization strength.
       - **Multilayer Perceptron:** Multilayer perceptron is a neural network that utilizes multiple hidden layers to capture the hierarchical features. Due to the high associated computational costs, hyperparameters were also selected based on best practices instead of extensive model tuning. A three-layer MLP is implemented with the Adam optimizer, along with the loss function set as sparse_categorical_crossentropy, a loss function often used in integer $y$ labels.
 
-  In addition, K-fold Cross-Validation with $K = 5$ is also implemented for model selection to lower the variance of the results.
+    In addition, K-fold Cross-Validation with $K = 5$ is also implemented for model selection to lower the variance of the results.
 
 - ### Results
   The results of the four models are summarized in the following table:
@@ -76,8 +76,5 @@
   - Incorporating player metadata (e.g., proficiency in champion, skill level) may also increase prediction accuracy, as the current dataset follows the assumption that all players are homogenous. 
 
 - ### References
-
-- 31st October 2019
-
   [1] Simon Newman. "rtr1pc8i_0.jpg" Reuters Institute for the Study of Journalism, 31 October 2019, https://reutersinstitute.politics.ox.ac.uk/news/if-your-newsroom-not-diverse-you-will-get-news-wrong/ \
   [2] Rishabh Misra, News Category Dataset (Kaggle, 2022), https://www.kaggle.com/datasets/rmisra/news-category-dataset/data
