@@ -20,7 +20,7 @@
   *Sample snapshot of dataset*
 
 - ### Data Cleaning and Preprocessing
-  The dataset does not contain missing values. However, prior to analyzing the data, necessary feature transformation and outlier deletion were performed based on domain knowledge. In particular, the following tasks are performed:
+  The purpose of this phase is to perform feature transformation and reduction prior to data analysis. In addition, missing values and duplicates are also identified and deleted.
 
   - Created features that represent the difference between a particular feature between teams. Note that all such features are constructed by subtracting the corresponding value of the red team from the blue team. 
     For instance, the feature $goldDiff$ is created by $blueTeamTotalGold - redTeamTotalGold$.
