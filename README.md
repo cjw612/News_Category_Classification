@@ -63,12 +63,12 @@
 - ### Results
   The results of the four models are summarized in the following table:
 
-  |Model|Accuracy|Precision|Recall|F1-Score|
-  |-----|--------|---------|------|--------|
-  |Logistic Regression|0.784456|0.783151|0.781385|0.782249|
-  |LDA|0.784073|0.785103|0.776931|0.780966|
-  |Random Forest|0.781987|0.786864|0.768155|0.777345|
-  |XGBoost|0.780327|0.785842|0.765254|0.775327|
+  | Model               | Accuracy   | Precision   | Recall    | F1-Score   |
+  |:--------------------|:-----------|:------------|:----------|:-----------|
+  | Logistic Regression | 0.740625   | 0.727775    | 0.740625  | 0.72769    |
+  | LinearSVC           | 0.735234   | 0.723957    | 0.735234  | 0.713178   |
+  | MLP                 | 0.744356   | 0.738371    | 0.744356  | 0.74052    |
+
 
 - ### Limitations
   - As current outlier detection is based on domain knowledge, incorporating a more sophisticated outlier detection algorithm may further improve the current classification results.
