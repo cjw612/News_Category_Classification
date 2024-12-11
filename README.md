@@ -73,7 +73,7 @@
 - ### Limitations
   - The current category reduction process is based on domain knowledge with sampled data from each category. However, there may be some other set of categories that can further reduce inter-class similarity, therefore potentially further optimizing the performance of the classification models.
   - Hyperparameter tuning is limited due to constraints on computational resources. Implementing Bayesian Optimization on a more extensive range of hyperparameters may also further optimize the models.
-  - Single class classification may lower the performance of our model, as some of the news entries have a more "ambiguous" class. For instance, President Trump's interactions with SNL hosts are often categorized as $COMEDY$ in the original labels, but the keyword "Trump" may lead the model to misclassify that news entry into $General$. Implementing multi-label classification may alleviate this issue and further optimize the models.  
+  - Implementing single-label classification may lower the performance of our model, as some of the news entries have a more "ambiguous" class. For instance, President Trump's interactions with SNL hosts are often categorized as $COMEDY$ in the original labels. However, the keyword "Trump" may lead the model to misclassify that news entry into $General$ (which encompasses political news). Therefore, implementing multi-label classification may potentially address this issue by reflecting the nature of news having more than one category in real-world scenarios.  
 
 - ### References
   [1] Simon Newman. "rtr1pc8i_0.jpg" Reuters Institute for the Study of Journalism, 31 October 2019, https://reutersinstitute.politics.ox.ac.uk/news/if-your-newsroom-not-diverse-you-will-get-news-wrong/ \
