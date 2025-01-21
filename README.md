@@ -11,9 +11,9 @@
     *Project flowchart and the corresponding Python notebook files*
   - #### Tech Stack
     - **Programming Languages:** Python
-    - **Libraries & Frameworks:** Scikit-learn, TensorFlow, PyTorch, Transformers, NLTK
+    - **Libraries & Frameworks:** Scikit-learn, TensorFlow, PyTorch, Transformers, NLTK, Hyperopt
     - **Feature Engineering:** TF-IDF, Word2Vec, BERT
-    - **Machine Learning Models:** Logistic Regression, SVM, MLP, Hyperparameter Tuning (Hyperopt)
+    - **Machine Learning Models:** Logistic Regression, Support Vector Machine, Multilayer Perceptron
     - **Visualization:** Matplotlib, Seaborn, WordCloud
     - **Development & Tools:** Jupyter Notebook
 - ### Data Source
