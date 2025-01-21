@@ -10,6 +10,12 @@
     ![workflow](assets/analysis_flowchart.png)
     *Project flowchart and the corresponding Python notebook files*
   - #### Tech Stack
+    - **Programming Languages:** Python
+    - **Libraries & Frameworks:** Scikit-learn, TensorFlow, PyTorch, Transformers, NLTK
+    - **Feature Engineering:** TF-IDF, Word2Vec, BERT
+    - **Machine Learning Models:** Logistic Regression, SVM, MLP, Hyperparameter Tuning (Hyperopt)
+    - **Visualization:** Matplotlib, Seaborn, WordCloud
+    - **Development & Tools:** Jupyter Notebook
 - ### Data Source
   The dataset used for this analysis is the **"News Category Dataset" (News_Category_Dataset_v3.json)** dataset created by Rishabh Misra on [Kaggle](https://www.kaggle.com/datasets/rmisra/news-category-dataset/data).
 
