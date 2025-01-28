@@ -47,10 +47,10 @@
 - ### Exploratory Data Analysis
   After preprocessing, there are only two columns remaining: $text$, which is the product of the merging of $headline$ and $short description$, and $reduced category$, which represents the new classes after merging. Therefore, EDA in this project is limited in scope and primarily aimed at exploring the relationship between words and categories. In particular, EDA is aimed to address following two questions:
 
-  - What is the distribution of categories?
+  - **What is the distribution of categories?**
     To address this question, a histogram is plotted after consolidating the original categories.
     ![wordcloud sample](assets/dist.png)
-  - What are the key terms associated with a specific category?
+  - **What are the key terms associated with a specific category?**
     
     | Category         | Top Words                                                                 |
     |-----------------|--------------------------------------------------------------------------|
