@@ -49,8 +49,21 @@
 
   - What is the distribution of categories?
     To address this question, a histogram is plotted after consolidating the original categories.
-    ![wordcloud sample](dist.png)
-  - What are the top words associated with a specific category?
+    ![wordcloud sample](assets/dist.png)
+  - What are the key terms associated with a specific category?
+    
+    | Category         | Top Words                                                                 |
+    |-----------------|--------------------------------------------------------------------------|
+    | General         | trump, donald, new, president, said, people, says, trumps, gop, house  |
+    | Entertainment   | new, trump, like, donald, star, video, time, says, game, watch         |
+    | Lifestyle      | photos, new, day, time, like, make, life, best, people, want           |
+    | Culture & Arts | art, new, artist, photos, life, like, world, years, time, people      |
+    | Business       | new, business, people, time, money, apple, company, women, make, work |
+    | Environment    | climate, change, week, new, animal, photos, world, dog, people, water |
+    | Education      | college, new, students, education, school, scientists, space, science, time, like |
+    | Society        | gay, women, black, new, people, like, love, day, time, trump         |
+    
+    To address this question, Latent Dirichlet Allocation is deployed to obtain the top words associated with each category. As our goal is to extract the most important words in each topic, we apply Latent Dirichlet Allocation differently with only one latent class in each category. More specifically, as opposed to identifying latent classes within each category, we aim to find the general key terms in each self-defined category to examine how accurate our categories are. As a result, we can observe that the key terms in each category generally align with the categories.
 
 - ### Models
   Data analysis is performed throughout three phases: text vectorization, dimension reduction, and model fitting. 
