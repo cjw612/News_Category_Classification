@@ -87,14 +87,14 @@
   | Model               | Accuracy   | Precision   | Recall    | F1-Score   |
   |:--------------------|:-----------|:------------|:----------|:-----------|
   | Logistic Regression | 0.740625   | 0.727775    | 0.740625  | 0.72769    |
-  | LinearSVC           | 0.735234   | 0.723957    | 0.735234  | 0.713178   |
+  | Linear SVC           | 0.735234   | 0.723957    | 0.735234  | 0.713178   |
   | MLP                 | 0.744356   | 0.738371    | 0.744356  | 0.74052    |
 
 
 - ### Limitations
   - The current category-defining process is based on domain knowledge with sampled data from each category. However, other algorithms may be deployed to further reduce inter-class similarity, therefore potentially optimizing the performance of the classification models. 
   - Implementing Bayesian Optimization on a more extensive range of hyperparameters may also further optimize model performance. However, hyperparameter tuning is limited due to constraints on computational resources. 
-  - Implementing single-label classification may lower the performance of our model, as some of the news entries have a more "ambiguous" class. For instance, President Trump's interactions with SNL hosts are often categorized as $COMEDY$ in the original labels. However, the keyword "Trump" may lead the model to misclassify that news entry into $General$ (which encompasses political news). Therefore, implementing multi-label classification may address this issue by reflecting the nature of news having more than one category in real-world scenarios.  
+  - Implementing single-label classification may lower the performance of our model, as some of the news entries have more "ambiguous" classes. For instance, President Trump's interactions with SNL hosts are often categorized as $COMEDY$ in the original labels. However, the keyword "Trump" may lead the model to misclassify that news entry into $General$ (which encompasses political news). Therefore, implementing multi-label classification may address this issue by reflecting the nature of news having more than one category in real-world scenarios.  
 
 - ### References
   [1] Simon Newman. "rtr1pc8i_0.jpg" Reuters Institute for the Study of Journalism, 31 October 2019, https://reutersinstitute.politics.ox.ac.uk/news/if-your-newsroom-not-diverse-you-will-get-news-wrong/ \
